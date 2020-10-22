@@ -33,7 +33,7 @@ namespace RegistroPedidos.BLL
                 foreach (OrdenesDetalle m in detalle)
                 {
                     producto = ProductosBLL.Buscar(m.ProductoId);
-                    producto.Inventario -= m.Cantidad;
+                    producto.Inventario += m.Cantidad;
                     ProductosBLL.Guardar(producto);
                 }
             }
@@ -60,7 +60,7 @@ namespace RegistroPedidos.BLL
                 foreach (OrdenesDetalle m in detalle)
                 {
                     producto = ProductosBLL.Buscar(m.ProductoId);
-                    producto.Inventario += m.Cantidad;
+                    producto.Inventario -= m.Cantidad;
                     ProductosBLL.Guardar(producto);
                 }
                 contexto.Database.ExecuteSqlRaw($"Delete FROM OrdenesDetalle Where OrdenId={orden.OrdenId}");
@@ -73,7 +73,7 @@ namespace RegistroPedidos.BLL
                 foreach (OrdenesDetalle m in nuevo)
                 {
                     producto = ProductosBLL.Buscar(m.ProductoId);
-                    producto.Inventario -= m.Cantidad;
+                    producto.Inventario += m.Cantidad;
                     ProductosBLL.Guardar(producto);
                 }
 
@@ -102,7 +102,7 @@ namespace RegistroPedidos.BLL
                 foreach (OrdenesDetalle d in viejosDetalles)
                 {
                     producto = ProductosBLL.Buscar(d.ProductoId);
-                    producto.Inventario += d.Cantidad;
+                    producto.Inventario -= d.Cantidad;
                     ProductosBLL.Guardar(producto);
                 }
                 if (orden != null)

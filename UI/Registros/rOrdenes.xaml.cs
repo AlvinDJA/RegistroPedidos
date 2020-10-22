@@ -75,19 +75,6 @@ namespace RegistroPedidos.UI.Registros
                 MessageBox.Show("Inserte el costo", "Advertencia",
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            else if (Convert.ToSingle(CantidadTextBox.Text) > prod.Inventario)
-            {
-                esValido = false;
-                MessageBox.Show("La cantidad es mayor a la existencia" +
-                    ", existen "+prod.Inventario+ " en el inventario", "Advertencia",
-                    MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            else if (prod.Inventario == 0)
-            {
-                esValido = false;
-                MessageBox.Show("Existen " + prod.Inventario + "En el inventario", "Advertencia",
-                    MessageBoxButton.OK, MessageBoxImage.Information);
-            }
             return esValido;
         }
         private bool ValidarGuardar()

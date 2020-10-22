@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroPedidos.UI.Consultas"
         mc:Ignorable="d"
-        Title="Consulta Productos" Height="321" Width="556">
+        Title="Consulta Productos" Height="321" Width="556" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,10,0,0">
             <StackPanel Orientation="Horizontal">

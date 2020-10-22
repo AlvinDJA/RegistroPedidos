@@ -27,17 +27,20 @@ namespace RegistroPedidos.DAL
             modelBuilder.Entity<Suplidores>().HasData(
                 new Suplidores { SuplidorId = 2, Nombres = "Jose Carlos" }
                 );
-
-            modelBuilder.Entity<Productos>().HasData(
-                new Productos { ProductoId = 1, Descripcion = "Pasta", Costo = 100, Inventario = 5 }
+            modelBuilder.Entity<Suplidores>().HasData(
+                new Suplidores { SuplidorId = 3, Nombres = "Carlos Miguel" }
                 );
 
             modelBuilder.Entity<Productos>().HasData(
-                new Productos { ProductoId = 2, Descripcion = "Enjuague", Costo = 150, Inventario = 3 }
+                new Productos { ProductoId = 1, Descripcion = "Pasta Dental", Costo = 100, Inventario = 5 }
                 );
 
             modelBuilder.Entity<Productos>().HasData(
-                new Productos { ProductoId = 3, Descripcion = "Cepillo", Costo = 45, Inventario = 10 }
+                new Productos { ProductoId = 2, Descripcion = "Enjuague Bucal", Costo = 150, Inventario = 3 }
+                );
+
+            modelBuilder.Entity<Productos>().HasData(
+                new Productos { ProductoId = 3, Descripcion = "Cepillo Dental", Costo = 45, Inventario = 10 }
                 );
         }
     }
